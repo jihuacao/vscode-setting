@@ -89,16 +89,18 @@
 	"doxygen_func": {
 		"prefix": "funcdoc",
 		"body": [
-			"/**", 
-			" * \\brief brief",
-			" * \\note note",
-			" * \\author none",
-			" * \\param[in] in",
-			" * \\param[out] out",
-			" * \\return return",
-			" * \\retval retval",
-			" * \\since version",
-			" * */"
+			//"/**", 
+			//" * \\fn",
+			//" * \\brief brief",
+			//" * \\note note",
+			//" * \\author none",
+			//" * \\param[in] in",
+			//" * \\param[out] out",
+			//" * \\return return",
+			//" * \\retval retval",
+			//" * \\since version",
+			//" * */"
+			"/// \\fn",
 		]
 	}
 }
