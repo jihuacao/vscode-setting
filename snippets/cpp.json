@@ -37,27 +37,68 @@
 	"doxygen_class": {
 		"prefix": "classdoc",
 		"body": [
-			"/** \\brief class: ",
-			"*",
-			"* detail: ",
-			"* */"
+			"/**", 
+			" * \\brief brief",
+			" * \\note note",
+			" * \\author none",
+			" * \\since version",
+			" * */"
 		]
 	},
 	"doxygen_memfunc": {
 		"prefix": "mfuncdoc",
 		"body": [
-			"/** \\brief func:",
-			"*",
-			"*	detail:",
-			"*	\\param",
-			"*	\\return",
-			"* */"
+			"/**", 
+			" * \\brief brief",
+			" * \\note note",
+			" * \\author none",
+			" * \\param[in] in",
+			" * \\param[out] out",
+			" * \\return return",
+			" * \\retval retval",
+			" * \\since version",
+			" * */"
 		]
 	},
 	"doxygen_memvar": {
 		"prefix": "mvardoc",
 		"body": [
-			"/** */"
+			"/**",
+			" * \\brief brief",
+			" * \\note note",
+			" * \\since version",
+			" * */"
+		]
+	},
+	"doxygen_file": {
+		"prefix": "filedoc",
+		"body":[
+			"/**",
+			" * @file 文件名",
+			" * @brief 简介",
+			" * @details 细节",
+			" * @mainpage 工程概览",
+			" * @author 作者",
+			" * @email 邮箱",
+			" * @version 版本号",
+			" * @date 年-月-日",
+			" * @license 版权",
+			" */",
+		]
+	},
+	"doxygen_func": {
+		"prefix": "funcdoc",
+		"body": [
+			"/**", 
+			" * \\brief brief",
+			" * \\note note",
+			" * \\author none",
+			" * \\param[in] in",
+			" * \\param[out] out",
+			" * \\return return",
+			" * \\retval retval",
+			" * \\since version",
+			" * */"
 		]
 	}
 }
