@@ -33,5 +33,31 @@
 			"along with this program.  If not, see <https://www.gnu.org/licenses/>.",                                                                                                                                                                                        "",
 			"*****************************************************************************/"
 		]
+	},
+	"doxygen_class": {
+		"prefix": "classdoc",
+		"body": [
+			"/** \\brief class: ",
+			"*",
+			"* detail: ",
+			"* */"
+		]
+	},
+	"doxygen_memfunc": {
+		"prefix": "mfuncdoc",
+		"body": [
+			"/** \\brief func:",
+			"*",
+			"*	detail:",
+			"*	\\param",
+			"*	\\return",
+			"* */"
+		]
+	},
+	"doxygen_memvar": {
+		"prefix": "mvardoc",
+		"body": [
+			"/** */"
+		]
 	}
 }
