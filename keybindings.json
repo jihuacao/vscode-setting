@@ -1,0 +1,53 @@
+// Place your key bindings in this file to override the defaultsauto[]
+[
+    {
+        "key": "ctrl+g ctrl+d",
+        "command": "workbench.debug.action.focusRepl"
+    },
+    {
+        "key": "ctrl+g ctrl+t",
+        "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "ctrl+l ctrl",
+        "command": "workbench.action.toggleMaximizedPanel"
+    },
+    {
+        "key": "ctrl+e ctrl+o",
+        "command": "workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+    },
+    {
+        "key": "ctrl+k e",
+        "command": "-workbench.files.action.focusOpenEditorsView",
+        "when": "workbench.explorer.openEditorsView.active"
+    },
+    {
+        "key": "ctrl+g ctrl+e",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+r ctrl+t",
+        "command": "workbench.action.tasks.runTask"
+    },
+    {
+        "key": "ctrl+e ctrl+f",
+        "command": "workbench.explorer.fileView.focus"
+    },
+    {
+        "key": "ctrl+e ctrl+l",
+        "command": "outline.focus"
+    },
+    {
+        "key": "ctrl+e ctrl+t",
+        "command": "timeline.focus"
+    },
+    {
+        "key": "ctrl+e ctrl+n",
+        "command": "npm.focus"
+    }
+]

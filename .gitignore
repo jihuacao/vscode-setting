@@ -2,3 +2,4 @@
 !.gitignore
 !snippets/*
 !snippets
+!keybindings.json
