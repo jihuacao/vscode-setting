@@ -3,3 +3,6 @@
 !snippets/*
 !snippets
 !keybindings.json
+!extensions-local.list
+!extensions-remote.list
+!markdownlint.json
