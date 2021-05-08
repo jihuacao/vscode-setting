@@ -1,23 +1,23 @@
-Extensions installed on SSH: gongsi:
-atlassian.atlascode
-BazelBuild.vscode-bazel
-DavidAnson.vscode-markdownlint
-DevonDCarew.bazel-code
-galarius.vscode-opencl
-geeklearningio.graphviz-markdown-preview
-GrapeCity.gc-excelviewer
-henriiik.docker-linter
-James-Yu.latex-workshop
-joaompinto.vscode-graphviz
-joffreykern.markdown-toc
-ms-azuretools.vscode-docker
-ms-python.python
-ms-toolsai.jupyter
-ms-vscode.cpptools
-redhat.vscode-yaml
-tht13.python
-tiibun.vscode-docker-ws
-twxs.cmake
-vscode.docker
-vscode.yaml
-yzhang.markdown-all-in-one
+code --install-extension Extensions installed on SSH: gongsi:
+code --install-extension atlassian.atlascode@2.8.6
+code --install-extension BazelBuild.vscode-bazel@0.4.1
+code --install-extension DavidAnson.vscode-markdownlint@0.40.4
+code --install-extension DevonDCarew.bazel-code@0.1.9
+code --install-extension galarius.vscode-opencl@0.6.6
+code --install-extension geeklearningio.graphviz-markdown-preview@0.0.8
+code --install-extension GrapeCity.gc-excelviewer@3.0.41
+code --install-extension henriiik.docker-linter@0.5.0
+code --install-extension James-Yu.latex-workshop@8.17.0
+code --install-extension joaompinto.vscode-graphviz@0.0.6
+code --install-extension joffreykern.markdown-toc@1.4.0
+code --install-extension ms-azuretools.vscode-docker@1.12.1
+code --install-extension ms-python.python@2021.4.765268190
+code --install-extension ms-toolsai.jupyter@2021.6.811652604
+code --install-extension ms-vscode.cpptools@1.3.1
+code --install-extension redhat.vscode-yaml@0.18.0
+code --install-extension tht13.python@0.2.3
+code --install-extension tiibun.vscode-docker-ws@0.5.0
+code --install-extension twxs.cmake@0.0.17
+code --install-extension vscode.docker@1.0.0
+code --install-extension vscode.yaml@1.0.0
+code --install-extension yzhang.markdown-all-in-one@3.4.0
