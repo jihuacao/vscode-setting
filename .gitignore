@@ -3,8 +3,8 @@
 !snippets/*
 !snippets
 !keybindings.json
-!extensions-local.sh
-!extensions-remote.sh
+!extensions-local.list
+!extensions-remote.list
 !generate_local_extension.sh
 !generate_remote_extension.sh
 !markdownlint.json
