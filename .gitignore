@@ -7,4 +7,5 @@
 !extensions-remote.list
 !generate_local_extension.sh
 !generate_remote_extension.sh
+!extensions_local_sync.sh
 !markdownlint.json
