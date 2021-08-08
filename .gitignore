@@ -6,7 +6,6 @@
 !generate_local_extension.sh
 !generate_remote_extension.sh
 !get_diff_of_extension_between_config_and_install.sh
-!install_extensions.sh
 !pull.sh
 !push.sh
 !readme.md
@@ -15,5 +14,5 @@
 !snippets
 !keybindings.json
 !markdownlint.json
-!extensions-local.list
-!extensions-remote.list
+!extensions.list
+!extension_operation.sh
