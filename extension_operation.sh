@@ -63,8 +63,17 @@ extract_by_begin(){
     reg=${2}
     for s in ${status[*]};do
         if [[ ${s} == ${reg}* ]];then
-            own=$(echo ${s//${reg}/ })
+            own=($(echo ${s//${reg}/ }))
             #print_list "${own[*]}"
+        fi
+    done
+    # 关于在remote-ssh中生成的extensions.list第一行会有混淆信息，这里使用插件特有字符@来滤除
+    for ((i=0;i<${#own[*]};));do
+        if [[ ${own[${i}]} != *@* ]];then
+            unset own[${i}]
+            own=("${own[@]}")
+        else
+            let "i=${i}+1"
         fi
     done
     echo "${own[*]}"
@@ -98,10 +107,28 @@ if [[ ${operation} == "show_diff" ]];then
     echo "both"
     print_list "${both[*]}"
     two_own=$(extract_by_begin "${status[*]}" "\>")
+    echo ""
     echo "two_own"
     print_list "${two_own[*]}"
 fi
-fi [[ ${operation} == "force_" ]]
+# 更新本地插件为remote与local的并集，同时更新remote插件列表文件
+if [[ ${operation} == "cup_update" ]];then
+    echo ""
+fi
+# 更新本地插件为remote与local的并集，不更新remote插件列表
+if [[ ${operation} == "cup" ]];then
+    echo ""
+fi
+# 更新本地插件为remote与local的交集，同时更新remote插件列表
+# 更新本地插件为remote与local的交集，同时更新remote插件列表
+# 强制更新remote为本地插件列表
+if [[ ${operation} == "force_local" ]];then
+    echo ""
+fi
+# 强制更新local为remote插件列表
+if [[ ${operation} == "force_remote" ]];then
+    echo ""
+fi
 #if [ ${1} = "local" ]
 #then
 #    # 获取每一行然后运行
