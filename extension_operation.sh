@@ -113,7 +113,22 @@ if [[ ${operation} == "show_diff" ]];then
 fi
 # 更新本地插件为remote与local的并集，同时更新remote插件列表文件
 if [[ ${operation} == "cup_update" ]];then
+    status=($(diff))
+    one_own=$(extract_by_begin "${status[*]}" "\<")
+    echo "one_own"
+    print_list "${one_own[*]}"
     echo ""
+    both=$(extract_by_begin "${status[*]}" "\|")
+    echo "both"
+    print_list "${both[*]}"
+    two_own=$(extract_by_begin "${status[*]}" "\>")
+    echo ""
+    echo "two_own"
+    print_list "${two_own[*]}"
+    for i in ${two_own[*]};do
+        code --install-extension ${i}
+    done
+    code --list-extensions --show-versions > extensions.list
 fi
 # 更新本地插件为remote与local的并集，不更新remote插件列表
 if [[ ${operation} == "cup" ]];then
