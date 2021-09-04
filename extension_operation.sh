@@ -1,4 +1,23 @@
+# 指导方针:
+#   保证remote-ssh与非remote-ssh同步，
+#   同时remote-ssh中可以使用的extension在非remote-ssh中也可以使用，这意味着使用非remote-ssh作为指导的可行性
+#   增加extension：
+#       非remote-ssh中cup->非remote-ssh中增加插件->remote-ssh中force_remote
+#   删除extension：
+#       在非remote-ssh中cup->非remote-ssh中手动删除extension->
+#       remote-ssh中force_remote
+#   合并extension版本：
+#       再非remote-ssh中cup->手动修改插件->force_local
+#       ->remote-ssh中force_remote
+#   代码测试：
+#       备份extensinos-list->force_local->恢复extensino-list->cup->恢复extension-list->force_remote
 echo ${1}
+
+get_extensions_list(){
+    file=${1}
+    temp=($(code --list-extensions --show-versions))
+    echo "${temp[*]}"
+}
 
 get_local_installed(){
     local temp
@@ -96,6 +115,46 @@ diff(){
     echo "${status[*]}"
 }
 
+show_diff(){
+    status=($(diff))
+    one_own=$(extract_by_begin "${status[*]}" "\<")
+    echo "one_own"
+    print_list "${one_own[*]}"
+    echo ""
+    both=$(extract_by_begin "${status[*]}" "\|")
+    echo "both"
+    print_list "${both[*]}"
+    two_own=$(extract_by_begin "${status[*]}" "\>")
+    echo ""
+    echo "two_own"
+    print_list "${two_own[*]}"
+}
+
+cup(){
+    status=($(diff))
+    one_own=$(extract_by_begin "${status[*]}" "\<")
+    both=$(extract_by_begin "${status[*]}" "\|")
+    two_own=$(extract_by_begin "${status[*]}" "\>")
+    for i in ${two_own[*]};do
+        #ret=$(code --install-extension ${i})
+        ret=`code --install-extension ms-vscode-remote.remote-ssh@0.65.7`
+        for r in "${ret[*]}";do
+            echo "ret:${r}"
+        done
+    done
+}
+
+force_local(){
+}
+
+force_remote(){
+    status=($(diff))
+    one_own=$(extract_by_begin "${status[*]}" "\<")
+    both=$(extract_by_begin "${status[*]}" "\|")
+    two_own=$(extract_by_begin "${status[*]}" "\>")
+    echo ""
+}
+
 operation="${1}"
 if [[ ${operation} == "show_diff" ]];then
     status=($(diff))
@@ -113,36 +172,31 @@ if [[ ${operation} == "show_diff" ]];then
 fi
 # 更新本地插件为remote与local的并集，同时更新remote插件列表文件
 if [[ ${operation} == "cup_update" ]];then
-    status=($(diff))
-    one_own=$(extract_by_begin "${status[*]}" "\<")
-    echo "one_own"
-    print_list "${one_own[*]}"
+    #code --list-extensions --show-versions > extensions.list
+    show_diff
+    cup
+    show_diff
     echo ""
-    both=$(extract_by_begin "${status[*]}" "\|")
-    echo "both"
-    print_list "${both[*]}"
-    two_own=$(extract_by_begin "${status[*]}" "\>")
-    echo ""
-    echo "two_own"
-    print_list "${two_own[*]}"
-    for i in ${two_own[*]};do
-        code --install-extension ${i}
-    done
-    code --list-extensions --show-versions > extensions.list
 fi
 # 更新本地插件为remote与local的并集，不更新remote插件列表
 if [[ ${operation} == "cup" ]];then
-    echo ""
+    show_diff
+    cup
+    show_diff
 fi
 # 更新本地插件为remote与local的交集，同时更新remote插件列表
 # 更新本地插件为remote与local的交集，同时更新remote插件列表
 # 强制更新remote为本地插件列表
 if [[ ${operation} == "force_local" ]];then
-    echo ""
+    show_diff
+    force_local
+    show_diff
 fi
 # 强制更新local为remote插件列表
 if [[ ${operation} == "force_remote" ]];then
-    echo ""
+    show_diff
+    force_remote
+    show_diff
 fi
 #if [ ${1} = "local" ]
 #then
