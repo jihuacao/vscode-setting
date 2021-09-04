@@ -1,16 +1,6 @@
 *
 !.gitignore
-!diff.sh
-!extensions_remote_sync.sh
-!force_remote.sh
-!generate_local_extension.sh
-!generate_remote_extension.sh
-!get_diff_of_extension_between_config_and_install.sh
-!pull.sh
-!push.sh
 !readme.md
-!remove_extensions.sh
-!uninstall_extensions.sh
 !snippets
 !keybindings.json
 !markdownlint.json

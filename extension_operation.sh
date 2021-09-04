@@ -145,6 +145,7 @@ cup(){
 }
 
 force_local(){
+    echo ""
 }
 
 force_remote(){
