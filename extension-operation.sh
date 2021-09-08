@@ -172,10 +172,10 @@ cup(){
     two_own=($(extract_by_begin "${status[*]}" "\>"))
     two_own_by_version=($(extract_by_begin "${status[*]}" "\++"))
     for i in ${two_own[*]};do
-        code --install-extension ${i}
+        $(code --install-extension ${i})
     done
     for i in ${two_own_by_version[*]};do
-        code --install-extension ${i}
+        $(code --install-extension ${i})
     done
     w=""
     append="${one_own[*]}"
@@ -222,17 +222,17 @@ force_remote(){
     both=$(extract_by_begin "${status[*]}" "\|")
     two_own=$(extract_by_begin "${status[*]}" "\>")
     two_own_by_version=($(extract_by_begin "${status[*]}" "\++"))
-    #for i in ${one_own[*]};do
-    #    code --uninstall-extension ${i}
-    #done
-    #for i in ${one_own_by_version[*]};do
-    #    code --uninstall-extension ${i}
-    #done
-    #for i in ${two_own[*]};do
-    #    code --install-extension ${i}
-    #done
+    for i in ${one_own[*]};do
+        $(code --uninstall-extension ${i})
+    done
+    for i in ${one_own_by_version[*]};do
+        $(code --uninstall-extension ${i})
+    done
+    for i in ${two_own[*]};do
+        $(code --install-extension ${i})
+    done
     for i in ${two_own_by_version[*]};do
-        code --install-extension ${i}
+        $(code --install-extension ${i})
     done
 }
 
