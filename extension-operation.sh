@@ -20,7 +20,7 @@ if [[ ${system} == "Darwin" ]];then
 elif [[ ${system} == "Linux" ]];then
     # GNU/Linux操作系统
     system="Linux"
-elif [[ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]];then
+elif [[ ${system} == *"MINGW"* ]];then
     # Windows NT操作系统
     system="WIN"
 fi
