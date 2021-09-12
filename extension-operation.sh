@@ -212,6 +212,9 @@ cup(){
     append="${two_own_by_version[*]}"
     append=$(echo ${append}|sed 's/ /\n/g')
     w="${w} ${append}"
+    append="${two_own[*]}"
+    append=$(echo ${append}|sed 's/ /\n/g')
+    w="${w} ${append}"
     #echo "asd"
     #echo ${one_own}
     #echo "asd"
