@@ -12,6 +12,19 @@
 #   代码测试：
 #       备份extensinos-list->force_local->恢复extensino-list->cup->恢复extension-list->force_remote
 echo ${1}
+system="unknow"
+system=$(uname)
+if [[ ${system} == "Darwin" ]];then
+    # Mac OS X 操作系统
+    system="Darwin"
+elif [[ ${system} == "Linux" ]];then
+    # GNU/Linux操作系统
+    system="Linux"
+elif [[ ${system} == "MINGW32_NT" ]];then
+    # Windows NT操作系统
+    system="WIN"
+fi
+echo "system: ${system}"
 
 get_extensions_list(){
     file=${1}

@@ -1,0 +1,29 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "force_local",
+            "program": "extension-operation.sh",
+            "args": ["force_local"]
+        },
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "show_diff",
+            "program": "extension-operation.sh",
+            "args": ["show_diff"]
+        },
+        {
+            "type": "bashdb",
+            "request": "launch",
+            "name": "cup_update",
+            "program": "extension-operation.sh",
+            "args": ["cup_update"]
+        },
+    ]
+}

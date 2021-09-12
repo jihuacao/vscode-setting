@@ -7,3 +7,4 @@
 !extensions.list
 !extension-operation.sh
 !.vscode
+!.vscode/launch.json
