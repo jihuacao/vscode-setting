@@ -15,6 +15,7 @@
             "type": "bashdb",
             "request": "launch",
             "name": "show_diff",
+            "cwd": "${workspaceFolder}",
             "program": "extension-operation.sh",
             "args": ["show_diff"]
         },
