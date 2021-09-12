@@ -46,6 +46,20 @@ get_local_installed(){
     echo "${temp[*]}"
 }
 
+# 从extension_name@extension_version中获取extension name
+get_extension_name(){
+    nv=${1}
+    nv=($(echo ${nv}|sed 's/@/ /g'))
+    echo ${nv[0]}
+}
+
+# 从extension_name@extension_version中获取extension name
+get_extension_version(){
+    nv=${1}
+    nv=($(echo ${nv}|sed 's/@/ /g'))
+    echo ${nv[1]}
+}
+
 get_remote_supposed(){
     local temp
     #while read in; do temp=(${temp[*]} $in); done < extensions.list;
@@ -75,16 +89,14 @@ compare(){
         #echo "one:${one}"
 
         #echo "arr_2 size:${#arr_2[@]}"
-        one_nv=($(echo ${one}|sed 's/@/ /g'))
-        one_n=${one_nv[0]}
-        one_v=${one_nv[1]}
+        one_n=$(get_extension_name ${one}]})
+        one_v=$(get_extension_version ${one}]})
         for ((two_index=0;two_index<${#arr_2[*]};two_index++));do
         #for two in ${arr_2[*]}
             #echo ${two_index}
             #echo ${arr_2[${two_index}]}
-            two_nv=($(echo ${arr_2[${two_index}]}|sed 's/@/ /g'))
-            two_n=${two_nv[0]}
-            two_v=${two_nv[1]}
+            two_n=$(get_extension_name ${arr_2[${two_index}]})
+            two_v=$(get_extension_version ${arr_2[${two_index}]})
             if [[ ${two_n} == ${one_n} ]];then
                 if [[ ${one} == "${arr_2[${two_index}]}" ]];then
                 #echo ${two}
@@ -185,10 +197,10 @@ cup(){
     two_own=($(extract_by_begin "${status[*]}" "\>"))
     two_own_by_version=($(extract_by_begin "${status[*]}" "\++"))
     for i in ${two_own[*]};do
-        $(code --install-extension ${i})
+        code --install-extension ${i}
     done
     for i in ${two_own_by_version[*]};do
-        $(code --install-extension ${i})
+        code --install-extension ${i}
     done
     w=""
     append="${one_own[*]}"
@@ -236,16 +248,17 @@ force_remote(){
     two_own=$(extract_by_begin "${status[*]}" "\>")
     two_own_by_version=($(extract_by_begin "${status[*]}" "\++"))
     for i in ${one_own[*]};do
-        $(code --uninstall-extension ${i})
+        n=$(get_extension_name ${i})
+        code --uninstall-extension ${n}
     done
     for i in ${one_own_by_version[*]};do
-        $(code --uninstall-extension ${i})
+        code --uninstall-extension ${i}
     done
     for i in ${two_own[*]};do
-        $(code --install-extension ${i})
+        code --install-extension ${i}
     done
     for i in ${two_own_by_version[*]};do
-        $(code --install-extension ${i})
+        code --install-extension ${i}
     done
 }
 
@@ -258,14 +271,12 @@ if [[ ${operation} == "cup_update" ]];then
     #code --list-extensions --show-versions > extensions.list
     show_diff
     cup
-    show_diff
     echo ""
 fi
 # 更新本地插件为remote与local的并集，不更新remote插件列表
 if [[ ${operation} == "cup" ]];then
     show_diff
     cup
-    show_diff
 fi
 # 更新本地插件为remote与local的交集，同时更新remote插件列表
 # 更新本地插件为remote与local的交集，同时更新remote插件列表
@@ -277,7 +288,6 @@ fi
 if [[ ${operation} == "force_remote" ]];then
     show_diff
     force_remote
-    show_diff
 fi
 #if [ ${1} = "local" ]
 #then
