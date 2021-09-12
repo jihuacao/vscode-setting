@@ -22,6 +22,13 @@
         {
             "type": "bashdb",
             "request": "launch",
+            "name": "force_remote",
+            "program": "extension-operation.sh",
+            "args": ["force_remote"]
+        },
+        {
+            "type": "bashdb",
+            "request": "launch",
             "name": "cup_update",
             "program": "extension-operation.sh",
             "args": ["cup_update"]
