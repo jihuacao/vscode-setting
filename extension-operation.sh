@@ -35,7 +35,7 @@ get_extensions_list(){
 get_local_installed(){
     local temp 
     temp=($(code --list-extensions --show-versions))
-    if [[ temp[0]=="SSH" ]];then
+    if [[ temp[0] == "SSH" ]];then
         unset temp[0]
         temp=("${temp[@]}")
         unset temp[0]
@@ -206,18 +206,22 @@ cup(){
     append="${one_own[*]}"
     append=$(echo ${append}|sed 's/ /\n/g')
     w="${w} ${append}"
+
     append="${both[*]}"
     append=$(echo ${append}|sed 's/ /\n/g')
     w="${w} ${append}"
+
     append="${two_own_by_version[*]}"
     append=$(echo ${append}|sed 's/ /\n/g')
     w="${w} ${append}"
+
     append="${two_own[*]}"
     append=$(echo ${append}|sed 's/ /\n/g')
     w="${w} ${append}"
     #echo "asd"
     #echo ${one_own}
     #echo "asd"
+    echo ">>>>>>>>>>cup to extensions.list"
     echo ${w} > extensions.list
 }
 
@@ -240,6 +244,7 @@ force_local(){
     append="${both[*]}"
     append=$(echo ${append}|sed 's/ /\n/g')
     w="${w} ${append}"
+    echo ">>>>>>>>>>write local installed to extensions.list"
     echo ${w} > extensions.list
 }
 
@@ -250,16 +255,20 @@ force_remote(){
     both=$(extract_by_begin "${status[*]}" "\|")
     two_own=$(extract_by_begin "${status[*]}" "\>")
     two_own_by_version=($(extract_by_begin "${status[*]}" "\++"))
+    echo ">>>>>>>>>>uninstall own by local"
     for i in ${one_own[*]};do
         n=$(get_extension_name ${i})
         code --uninstall-extension ${n}
     done
+    echo ">>>>>>>>>>uninstall own by local for version"
     for i in ${one_own_by_version[*]};do
         code --uninstall-extension ${i}
     done
+    echo ">>>>>>>>>>install own by remote"
     for i in ${two_own[*]};do
         code --install-extension ${i}
     done
+    echo ">>>>>>>>>>install own by remote for version"
     for i in ${two_own_by_version[*]};do
         code --install-extension ${i}
     done

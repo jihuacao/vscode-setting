@@ -17,14 +17,20 @@
             "name": "show_diff",
             "cwd": "${workspaceFolder}",
             "program": "extension-operation.sh",
-            "args": ["show_diff"]
+            "args": ["show_diff"],
+            "windows": {
+                "pathBash": "${GIT_BASH}/bash.exe",
+            },
         },
         {
             "type": "bashdb",
             "request": "launch",
             "name": "force_remote",
             "program": "extension-operation.sh",
-            "args": ["force_remote"]
+            "args": ["force_remote"],
+            "windows": {
+                "pathBash": "${GIT_BASH}/bash.exe",
+            },
         },
         {
             "type": "bashdb",
