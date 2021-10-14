@@ -1,4 +1,9 @@
 # readme
+## fit between windows and linux
+脚本先在linux下进行测试，然后在windows下进行测试，当矛盾点出现时，通过判断系统类型进行分支处理
+
+在windows下使用git的bash运行脚本，使用bash *.sh的方法运行
+在linux中也是使用bash环境运行脚本
 ## 更新插件方法
 linux下使用以下命令进行插件操作
 ```bash
