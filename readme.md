@@ -11,3 +11,10 @@ bash extension_operation.sh **
 ```
 * show_diff:bash extension_operation.sh show_diff
 显示出本地安装的插件与extensions.list的差异
+## 各插件作用
+* Markdown All in One
+  * markdown
+* Markdown Preview Enhanced
+  * 增强预览功能，替代vscode自带预览
+* Markdown-pdf
+  * markdown生成pdf jpeg png html等导出文件
