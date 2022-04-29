@@ -10,5 +10,5 @@
     "plantuml.java": "D:\\Program\\Java\\jre1.8.0_331\\bin\\java.exe",
     "markdown-pdf.plantumlServer": "",
     "markdown-pdf.plantumlCloseMarker": "```",
-    "markdown-pdf.plantumlOpenMarker": "```plantuml"
+    "markdown-pdf.plantumlOpenMarker": "```plantuml",
 }
