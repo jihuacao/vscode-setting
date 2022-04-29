@@ -1,0 +1,14 @@
+{
+    "security.workspace.trust.untrustedFiles": "open",
+    "extensions.autoUpdate": false,
+    "files.eol": "\n",
+    "files.encoding": "utf8",
+    "remote.SSH.remotePlatform": {
+        "WorkStation": "linux"
+    },
+    "plantuml.render": "Local",
+    "plantuml.java": "D:\\Program\\Java\\jre1.8.0_331\\bin\\java.exe",
+    "markdown-pdf.plantumlServer": "",
+    "markdown-pdf.plantumlCloseMarker": "```",
+    "markdown-pdf.plantumlOpenMarker": "```plantuml"
+}
