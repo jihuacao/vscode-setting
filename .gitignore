@@ -3,7 +3,7 @@
 !readme.md
 !snippets
 !keybindings.json
-!markdownlint.json
+!.markdownlint.json
 !extensions.list
 !extension-operation.sh
 !.vscode
