@@ -23,5 +23,9 @@
         "MD047": false,
         "no-hard-tabs": false
     },
-    "markdownlint.run": "onSave"
+    "markdownlint.run": "onSave",
+    "files.exclude": {
+        ".git": true,
+        "**/.git": false
+    }
 }
