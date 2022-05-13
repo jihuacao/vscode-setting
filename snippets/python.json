@@ -12,6 +12,19 @@
 	// 	],
 	// 	"description": "Log output to console"
 	// }
+	"license_doc": {
+		"prefix": "doc_license",
+		"body": []
+	},
+	"file_doc": {
+		"prefix": "doc_file",
+		"body": [
+			"##@FileName",
+			"# @Note",
+			"# @Time",
+			"# @Author"
+		]
+	},
 	"func_doc": {
 		"prefix": "doc_func",
 		"body": [
