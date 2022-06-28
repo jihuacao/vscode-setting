@@ -4,7 +4,18 @@
     "files.eol": "\n",
     "files.encoding": "utf8",
     "remote.SSH.remotePlatform": {
-        "WorkStation": "linux"
+        "WorkStation": "linux",
+        "10.18.1.52:SSDAR": "linux",
+        "10.18.1.52": "linux",
+        "10.18.1.52:SSDAR_TEST": "linux",
+        "Project-Smoke": "linux",
+        "10.18.1.52:Project-Smoke": "linux",
+        "102.168.12.85:AllBaseDev1": "linux",
+        "102.168.1.52:AllBaseDev1": "linux",
+        "102.168.1.52:CheckRepeat": "linux",
+        "10.110.74.98": "linux",
+        "192.168.12.85:CheckRepeat": "linux",
+        "192.168.12.85:SSDAR": "linux"
     },
     "plantuml.render": "Local",
     "plantuml.java": "D:/Program/Java/jre1.8.0_331/bin/java.exe",
@@ -27,5 +38,13 @@
     "files.exclude": {
         ".git": true,
         "**/.git": false
-    }
+    },
+    "extensions.ignoreRecommendations": true,
+    "markdown-preview-enhanced.enableScriptExecution": true,
+    "markdown-preview-enhanced.previewTheme": "github-light.css",
+    "workbench.editorAssociations": {
+        "*.mp4": "default"
+    },
+    "jupyter.askForKernelRestart": false,
+    "update.mode": "manual"
 }
