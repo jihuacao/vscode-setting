@@ -1,0 +1,38 @@
+{
+    "fpa_data_add":{
+        "prefix": "data_add",
+        "body": [
+            "op_$0_add[label=\"增加\"; 功能描述=\"往${$0.label}中增加${$0.label}。\"; 逻辑描述=\"*.选择一目标数据。*.进行$1。*.增加到${$0.label}中。\"; style=uinvis;];"
+        ]
+    },
+    "fpa_data_del":{
+        "prefix": "data_del",
+        "body":[
+            "op_$0_del[label=\"删除\"; 功能描述=\"从${$0.label}中删除数据。\"; 逻辑描述=\"*.选择${$0.label}的某条数据。*.从${$0.label}中删除选择的数据。\"; style=uinvis;];"
+        ]
+    },
+    "fpa_data_view":{
+        "prefix": "data_view",
+        "body": [
+            "op_$0_view[label=\"查看\"; 功能描述=\"查看${$0.label}中的数据。\"; 逻辑描述=\"*.选择${$0.label}中的数据。*.查看${$0.label}内容。\"; style=uinvis;];"
+        ]
+    },
+    "fpa_data_statistic":{
+        "prefix": "data_statistic",
+        "body": [
+            "op_$1_statistic[label=\"统计\"; 功能描述=\"获取${$1.label}中的数据，进行相关统计[$0]。\"; 逻辑描述=\"*.对${$1.label}全体数据进行遍历。*.提取目标统计元素[$0]。*.打印相关信息。\"; style=uinvis;];"
+        ]
+    },
+    "fpa_data_change":{
+        "prefix": "data_change",
+        "body": [
+            "op_$0_change[label=\"更改\"; 功能描述=\"更改${$0.label}中的数据。\"; 逻辑描述=\"*.选择${$0.label}中的数据。*.更改${$0.label}内容。*.保存到${$0.label}中\"; style=uinvis;];"
+        ]
+    },
+    "fpa_data_generate":{
+        "prefix": "data_generate",
+        "body": [
+            "op_$0_generate[label=\"生成\"; 功能描述=\"生成${$0.label}中的数据。\"; 逻辑描述=\"*.根据$1生成${$0.label}。*.保存到${$0.label}中\"; style=uinvis;];"
+        ]
+    },
+}

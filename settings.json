@@ -15,7 +15,14 @@
         "102.168.1.52:CheckRepeat": "linux",
         "10.110.74.98": "linux",
         "192.168.12.85:CheckRepeat": "linux",
-        "192.168.12.85:SSDAR": "linux"
+        "192.168.12.85:SSDAR": "linux",
+        "192.168.12.85:ShangTai": "linux",
+        "192.168.12.85:All": "linux",
+        "192.168.12.85:TTS": "linux",
+        "192.168.12.85:FaceLib": "linux",
+        "192.168.12.145": "linux",
+        "192.168.12.18": "linux",
+        "HuaWeiGuoChanHua": "linux"
     },
     "plantuml.render": "Local",
     "plantuml.java": "D:/Program/Java/jre1.8.0_331/bin/java.exe",
@@ -46,5 +53,12 @@
         "*.mp4": "default"
     },
     "jupyter.askForKernelRestart": false,
-    "update.mode": "manual"
+    "update.mode": "manual",
+    "java.jdt.ls.java.home": "d:\\Program\\Java\\jdk-17.0.4.8-hotspot",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "cmake.buildBeforeRun": false,
+    "cmake.useCMakePresets": "never",
+    "cmake.configureOnEdit": false,
+    "cmake.autoSelectActiveFolder": false,
+    "hediet.vscode-drawio.local-storage": "eyIuZHJhd2lvLWNvbmZpZyI6IntcImxhbmd1YWdlXCI6XCJcIixcImN1c3RvbUZvbnRzXCI6W10sXCJsaWJyYXJpZXNcIjpcImdlbmVyYWxcIixcImN1c3RvbUxpYnJhcmllc1wiOltcIkwuc2NyYXRjaHBhZFwiXSxcInBsdWdpbnNcIjpbXSxcInJlY2VudENvbG9yc1wiOltdLFwiZm9ybWF0V2lkdGhcIjowLFwiY3JlYXRlVGFyZ2V0XCI6ZmFsc2UsXCJwYWdlRm9ybWF0XCI6e1wieFwiOjAsXCJ5XCI6MCxcIndpZHRoXCI6ODI3LFwiaGVpZ2h0XCI6MTE2OX0sXCJzZWFyY2hcIjp0cnVlLFwic2hvd1N0YXJ0U2NyZWVuXCI6dHJ1ZSxcImdyaWRDb2xvclwiOlwiI2QwZDBkMFwiLFwiZGFya0dyaWRDb2xvclwiOlwiIzZlNmU2ZVwiLFwiYXV0b3NhdmVcIjp0cnVlLFwicmVzaXplSW1hZ2VzXCI6bnVsbCxcIm9wZW5Db3VudGVyXCI6MCxcInZlcnNpb25cIjoxOCxcInVuaXRcIjoxLFwiaXNSdWxlck9uXCI6ZmFsc2UsXCJ1aVwiOlwiXCJ9In0="
 }

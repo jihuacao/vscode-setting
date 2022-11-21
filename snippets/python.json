@@ -19,10 +19,10 @@
 	"file_doc": {
 		"prefix": "doc_file",
 		"body": [
-			"##@FileName",
+			"##@FileName $TM_FILENAME",
 			"# @Note",
-			"# @Time",
-			"# @Author"
+			"# @Author cjh",
+			"# @Time $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
 		]
 	},
 	"func_doc": {
@@ -32,7 +32,9 @@
 			"# @note",
 			"# @param[in]",
 			"# @param[in]",
-			"# @return "
+			"# @return ",
+			"# @time $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"# @author cjh",
 		]
 	},
 	"class_doc":{
@@ -40,6 +42,18 @@
 		"body": [
 			"##@brief",
 			"# @note",
+			"# @time $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"# @author cjh",
 		]
-	}
+	},
+	"block_doc": {
+		"prefix": "doc_block",
+		"body":[
+			"# <block_begin: $1",
+			"# @time $CURRENT_YEAR-$CURRENT_MONTH-$CURRENT_DATE",
+			"# @author cjh",
+			"",
+			"# block_end: $1>"
+		]
+	},
 }
