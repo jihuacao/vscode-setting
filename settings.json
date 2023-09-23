@@ -22,7 +22,8 @@
         "192.168.12.85:FaceLib": "linux",
         "192.168.12.145": "linux",
         "192.168.12.18": "linux",
-        "HuaWeiGuoChanHua": "linux"
+        "HuaWeiGuoChanHua": "linux",
+        "wslu2204": "linux"
     },
     "plantuml.render": "Local",
     "plantuml.java": "D:/Program/Java/jre1.8.0_331/bin/java.exe",
